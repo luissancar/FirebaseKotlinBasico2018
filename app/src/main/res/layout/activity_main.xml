@@ -26,6 +26,11 @@
             android:hint="apellidos"
             android:ems="10"
             android:id="@+id/editTextApellidos"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar" android:visibility="gone"/>
     <Button
             android:text="Add"
             android:layout_width="match_parent"

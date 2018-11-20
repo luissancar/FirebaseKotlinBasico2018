@@ -6,6 +6,8 @@ import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import com.example.luissancar.firebasekotlinbasico.R.id.button
+import com.example.luissancar.firebasekotlinbasico.R.id.textView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -15,7 +17,7 @@ import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var progressBar: ProgressBar
+
     private lateinit var dbReference: DatabaseReference
     private lateinit var database: FirebaseDatabase
 
@@ -58,8 +60,10 @@ class MainActivity : AppCompatActivity() {
 
         if (editTextApellidos.length()==0 || editTextNombre.length()==0)
             return
+        progressBar.visibility=View.VISIBLE
         val nombre=Persona(editTextNombre.text.toString(),editTextApellidos.text.toString())
         dbReference.child("dat").push().setValue(nombre)
+        progressBar.visibility=View.GONE
 
     }
 
