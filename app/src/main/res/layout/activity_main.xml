@@ -46,8 +46,11 @@
             android:id="@+id/spinner"/>
     <Button
             android:text="Borrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/buttonBorrar"/>
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/buttonBorrar"/>
     <TextView
             android:text=""
             android:background="@android:color/holo_green_light"
